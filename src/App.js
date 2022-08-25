@@ -34,7 +34,7 @@ function App(props) {
 
       <main className="App-main"> 
       <br></br> <br></br>
-      <p> <h1><ItemListContainer greeting={'Hola esto es una Tienda en React JS'}/></h1> </p>
+      <p> <h1><ItemListContainer greeting={'Esto es una Tienda en React JS'}/></h1> </p>
      </main>
 
     </div>
