@@ -18,7 +18,7 @@ const NavBar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <ul><img src={logo} className="App-logo" alt="logo" /></ul>
-                    <ul>Articulos de Caza "El Entreriano"</ul>
+                    <ul>Armeria "La Liebre"</ul>
                     <ul><a className="dropdown-item" href="">Inicio</a></ul>
                     <ul><a className="dropdown-item" href="">Productos</a></ul>
                     <ul><a className="dropdown-item" href="">Ofertas</a></ul>
