@@ -1,0 +1,11 @@
+[
+{"codigo": "1", "marca":"CCI MiniMag", "tipo": "Balas calibre 22", "precio": "2000", "estado": "Nuevo", "stock": "20", "img":"img/cci.png"},
+{"codigo": "2", "marca":"Winchester", "tipo": "Balas calibre 308", "precio": "4000", "estado": "Nuevo", "stock": "10", "img":"img/308.png"},
+{"codigo": "3", "marca":"Export SAGA", "tipo": "Cartuchos calibre 12", "precio": "2500", "estado": "Nuevo", "stock": "17", "img": "./img/1270.png"},
+{"codigo": "4", "marca":"Orbea", "tipo": "Cartuchos calibre 20", "precio": "2200", "estado": "Nuevo", "stock": "15", "img": "./img/2070.png"},
+{"codigo": "5", "marca":"FM", "tipo": "Rifle 22LR", "precio": "120000", "estado": "Nuevo", "stock": "5", "img": "./img/22lr.png"},
+{"codigo": "6", "marca":"Mossberg", "tipo": "Fusil 308", "precio": "220000", "estado": "Usado", "stock": "30", "img": "./img/mossberg.png"},
+{"codigo": "7", "marca":"Rossi", "tipo": "Escopeta 12/70", "precio": "80000", "estado": "Nuevo", "stock": "4", "img": "./img/rossi.png"},
+{"codigo": "8", "marca":"Beretta", "tipo": "Escopeta 20/70", "precio": "70000", "estado": "Usado", "stock": "5", "img": "./img/beretta.png"},
+{"codigo": "9", "marca":"Remington", "tipo": "Revolver", "precio": "105000", "estado": "Usado", "stock": "2", "img": "./img/remington.png"}
+]

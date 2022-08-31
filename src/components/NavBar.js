@@ -10,12 +10,12 @@ const NavBar = () => {
     
     <main>  
 
-<nav className="navbar navbar-expand-lg navbar-light">
-          <div className="container-fluid">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <div className="container">
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <nav className="navbar navbar-expand-lg navbar-light">
 
                     <ul><img src={logo} className="App-logo" alt="logo" /></ul>
                     <ul>Armeria "La Liebre"</ul>
@@ -25,15 +25,14 @@ const NavBar = () => {
                     <ul><a className="dropdown-item" href="">Nosotros</a></ul>
                     <ul><a className="dropdown-item" href="">Contacto</a></ul>
                     <ul><CartWidget/></ul>
+              </nav>
 
-              <form className="d-flex">
-              </form>
-            </div>
-          </div>
-        </nav>
+        <form className="d-flex">
+        </form>
+    </div>
+  
 
-      </main>
-
+</main>
     
   )
 }
