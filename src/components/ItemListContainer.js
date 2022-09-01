@@ -7,7 +7,7 @@ const ItemListContainer = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/productos.json')
+    fetch('./productos.json')
       .then( resp => resp.json() )
       .then( datos => {
        setTimeout(() => {
