@@ -25,7 +25,9 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
 
 
     return (
+
       <div className="card w-96 bg-base-100 shadow-xl px-6 py-6">
+          <strong>{tipo}</strong>
           <img className= "imagen" src={img} alt="Imagen producto"/>
           <h5>Código de Producto: {codigo} </h5>
           <h5>Tipo: {tipo} </h5>
@@ -38,7 +40,6 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
           <Button className="bg-blue-500" disabled={ver} > Comprar</Button>
           <br></br><br></br>
       </div>
-
 
     )
   }

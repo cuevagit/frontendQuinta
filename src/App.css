@@ -33,7 +33,7 @@
 }
 
 .App-main {
-  background-color: hwb(0 47% 51% / 0.822);
+  background-color: hwb(0 81% 19% / 0.822);
   display:flex;
   /* min-height: 500vh;
   /*height: 500vmin;*/
@@ -104,12 +104,16 @@
   border-width: 10px;
   background-size: cover; 
   border-color: #505155;
+  background-color: #bdbfc4;
   border-spacing: 50px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top:  50px;
   display: inline-block;
   line-height: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+
 }
 
 .text-center{
