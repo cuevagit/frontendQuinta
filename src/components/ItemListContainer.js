@@ -7,6 +7,7 @@ const ItemListContainer = () => {
 
 
   useEffect(() => {
+    //Traigo los datos del archivo Json
     fetch('./productos.json')
       .then( resp => resp.json() )
       .then( datos => {
