@@ -25,7 +25,7 @@ function App(props) {
     </div>
 
     <footer className="App-footer">
-       <h5>Cueva Inc.</h5>  
+       <h5>Cueva Martin © 2022 </h5>  
    </footer>
       </>
     
