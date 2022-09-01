@@ -8,7 +8,6 @@ import './App.css';
 
 function App(props) {
   //Edit <code>src/App.js</code> and save to reload.
-  let mensaje = 'Esto es una Tienda en React JS';
 
   return (
     <>

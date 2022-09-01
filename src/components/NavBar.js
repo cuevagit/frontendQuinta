@@ -1,6 +1,7 @@
 import '../App.css';
 import CartWidget from "./CartWidget"
 import logo from '../logocazasinfondo.png';
+
 //import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -19,11 +20,11 @@ const NavBar = () => {
 
                     <ul><img src={logo} className="App-logo" alt="logo" /></ul>
                     <ul>Armeria "La Liebre"</ul>
-                    <ul><a className="dropdown-item" href="">Inicio</a></ul>
-                    <ul><a className="dropdown-item" href="">Productos</a></ul>
-                    <ul><a className="dropdown-item" href="">Ofertas</a></ul>
-                    <ul><a className="dropdown-item" href="">Nosotros</a></ul>
-                    <ul><a className="dropdown-item" href="">Contacto</a></ul>
+                    <ul><a className="dropdown-item" href="http://localhost:3000">Inicio</a></ul>
+                    <ul><a className="dropdown-item" href="http://localhost:3000">Productos</a></ul>
+                    <ul><a className="dropdown-item" href="http://localhost:3000">Ofertas</a></ul>
+                    <ul><a className="dropdown-item" href="http://localhost:3000">Nosotros</a></ul>
+                    <ul><a className="dropdown-item" href="http://localhost:3000">Contacto</a></ul>
                     <ul><CartWidget/></ul>
               </nav>
 
