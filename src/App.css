@@ -33,7 +33,7 @@
 }
 
 .App-main {
-  background-color: hwb(0 81% 19% / 0.822);
+  background-color: hwb(0 26% 74% / 0.514);
   display:flex;
   /* min-height: 500vh;
   /*height: 500vmin;*/
@@ -103,8 +103,8 @@
 .card{
   border-width: 10px;
   background-size: cover; 
-  border-color: #505155;
-  background-color: #bdbfc4;
+  border-color: #4c4c50;
+  background-color: #6f7279;
   border-spacing: 50px;
   padding-left: 20px;
   padding-right: 20px;
@@ -113,7 +113,6 @@
   line-height: 20px;
   margin-top: 20px;
   margin-right: 20px;
-
 }
 
 .text-center{
