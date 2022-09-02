@@ -6,6 +6,5 @@
 {"codigo": "5", "marca":"FM", "tipo": "Rifle 22LR", "precio": "120000", "estado": "Nuevo", "stock": "5", "img": "./img/22lr.png"},
 {"codigo": "6", "marca":"Mossberg", "tipo": "Fusil 308", "precio": "220000", "estado": "Usado", "stock": "30", "img": "./img/mossberg.png"},
 {"codigo": "7", "marca":"Rossi", "tipo": "Escopeta 12/70", "precio": "80000", "estado": "Nuevo", "stock": "4", "img": "./img/rossi.png"},
-{"codigo": "8", "marca":"Beretta", "tipo": "Escopeta 20/70", "precio": "70000", "estado": "Usado", "stock": "5", "img": "./img/beretta.png"},
-{"codigo": "9", "marca":"Remington", "tipo": "Revolver", "precio": "105000", "estado": "Usado", "stock": "2", "img": "./img/remington.png"}
+{"codigo": "8", "marca":"Beretta", "tipo": "Escopeta 20/70", "precio": "70000", "estado": "Usado", "stock": "5", "img": "./img/beretta.png"}
 ]
