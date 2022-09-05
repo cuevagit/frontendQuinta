@@ -1,5 +1,6 @@
 import {useState} from "react"
 import { Button } from 'react-daisyui'
+import { Link } from 'react-router-dom';
 
 const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
 
@@ -25,8 +26,10 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
 
 
     return (
+   <>      
+        <div className="card w-96 bg-base-100 shadow-xl px-6 py-6">
 
-      <div className="card w-96 bg-base-100 shadow-xl px-6 py-6">
+        <Link to={'/productos/' + codigo}>
           <strong>{tipo}</strong>
           <img className= "imagen" src={img} alt="Imagen producto"/>
           <h6>Marca: {marca} </h6>
@@ -34,10 +37,12 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
           <h6>Precio: {precio}</h6>
           <h6>Estado: {estado}</h6>
           <br></br>
+          </Link>
           <Button className="btn btn-square btn-secondary" type="button" onClick={restar}>-</Button> {clicks} <button className="btn btn-square bg-blue-500" onClick={sumar}>+</button> <br></br><br></br>
           <Button className="bg-blue-500" disabled={ver} > Comprar</Button>
           <br></br><br></br>
       </div>
+  </>
 
     )
   }

@@ -1,10 +1,10 @@
 [
-{"codigo": "1", "marca":"CCI MiniMag", "tipo": "Balas calibre 22", "precio": "2000", "estado": "Nuevo", "stock": "20", "img":"img/cci.png"},
-{"codigo": "2", "marca":"Winchester", "tipo": "Balas calibre 308", "precio": "4000", "estado": "Nuevo", "stock": "10", "img":"img/308.png"},
-{"codigo": "3", "marca":"Export SAGA", "tipo": "Cartuchos calibre 12", "precio": "2500", "estado": "Nuevo", "stock": "17", "img": "./img/1270.png"},
-{"codigo": "4", "marca":"Orbea", "tipo": "Cartuchos calibre 20", "precio": "2200", "estado": "Nuevo", "stock": "15", "img": "./img/2070.png"},
-{"codigo": "5", "marca":"FM", "tipo": "Rifle 22LR", "precio": "120000", "estado": "Nuevo", "stock": "5", "img": "./img/22lr.png"},
-{"codigo": "6", "marca":"Mossberg", "tipo": "Fusil 308", "precio": "220000", "estado": "Usado", "stock": "30", "img": "./img/mossberg.png"},
-{"codigo": "7", "marca":"Rossi", "tipo": "Escopeta 12/70", "precio": "80000", "estado": "Nuevo", "stock": "4", "img": "./img/rossi.png"},
-{"codigo": "8", "marca":"Beretta", "tipo": "Escopeta 20/70", "precio": "70000", "estado": "Usado", "stock": "5", "img": "./img/beretta.png"}
+{"codigo": "1", "marca":"CCI MiniMag", "tipo": "Balas calibre 22", "precio": "2000", "estado": "Nuevo", "stock": "20", "oferta": "S", "img":"./img/cci.png", "detalle": "Balas CCI MiniMag, únicas en su clase, con su punta de 24grains, y una velocidad de 1024 metros por segundo, le permite ubicarse como única en su clase."},
+{"codigo": "2", "marca":"Winchester", "tipo": "Balas calibre 308", "precio": "4000", "estado": "Nuevo", "stock": "10", "oferta": "N", "img":"./img/308.png",  "detalle": "Balas 308 Winchester, únicas en su clase, con su punta de 240grains, y una velocidad de 3000 metros por segundo, le permite ubicarse como única en su clase."},
+{"codigo": "3", "marca":"Export SAGA", "tipo": "Cartuchos calibre 12", "precio": "2500", "estado": "Nuevo", "stock": "17", "oferta": "S", "img": "./img/1270.png", "detalle": "Cartuchos 12/70 Export Saga, únicas en su clase, número 5, lo que permite una buena disperción, sin perder poder de choque."},
+{"codigo": "4", "marca":"Orbea", "tipo": "Cartuchos calibre 20", "precio": "2200", "estado": "Nuevo", "stock": "15", "oferta": "N", "img": "./img/2070.png", "detalle": "Cartuchos 20/70 Orbea, únicas en su clase, número 5, lo que permite una buena disperción, sin perder poder de choque." },
+{"codigo": "5", "marca":"FM", "tipo": "Rifle 22LR", "precio": "120000", "estado": "Nuevo", "stock": "5", "oferta": "S", "img": "./img/22lr.png", "detalle": "Rifle 22LR, FM Fabricación Militar, construido para durar, ideal para la Caza Menor."},
+{"codigo": "6", "marca":"Mossberg", "tipo": "Fusil 308", "precio": "220000", "estado": "Usado", "stock": "30", "oferta": "S", "img": "./img/mossberg.png", "detalle": "Fusil 308Win, Mossberg, construido para durar, ideal para la Caza Mayor."},
+{"codigo": "7", "marca":"Rossi", "tipo": "Escopeta 12/70", "precio": "80000", "estado": "Nuevo", "stock": "4", "oferta": "N", "img": "./img/rossi.png", "detalle": "Escopeta 12/70, Rossi, Brasilera, construida para durar, ideal para la Caza Menor y Mayor."},
+{"codigo": "8", "marca":"Beretta", "tipo": "Escopeta 20/70", "precio": "70000", "estado": "Usado", "stock": "5", "oferta": "N", "img": "./img/beretta.png", "detalle": "Escopeta 20/70, Beretta, Españoña, construida para durar, ideal para la Caza Menor."}
 ]

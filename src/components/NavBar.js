@@ -1,8 +1,8 @@
 import '../App.css';
 import CartWidget from "./CartWidget"
 import logo from '../logocazasinfondo.png';
-
-//import 'bootstrap/dist/css/bootstrap.css';
+//import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -20,12 +20,12 @@ const NavBar = () => {
 
                     <ul><img src={logo} className="App-logo" alt="logo" /></ul>
                     <ul>Armeria "La Liebre"</ul>
-                    <ul><a className="dropdown-item" href="http://localhost:3000">Inicio</a></ul>
-                    <ul><a className="dropdown-item" href="http://localhost:3000">Productos</a></ul>
-                    <ul><a className="dropdown-item" href="http://localhost:3000">Ofertas</a></ul>
-                    <ul><a className="dropdown-item" href="http://localhost:3000">Nosotros</a></ul>
-                    <ul><a className="dropdown-item" href="http://localhost:3000">Contacto</a></ul>
-                    <ul><CartWidget/></ul>
+                    <ul><Link className="dropdown-item" to='/'>Inicio</Link></ul>
+                    <ul><Link className="dropdown-item" to='/productos'> Productos</Link></ul>
+                    <ul><Link className="dropdown-item" to='/ofertas'> Ofertas</Link></ul>
+                    <ul><Link className="dropdown-item" to='/nosotros'> Nosotros</Link></ul>
+                    <ul><Link className="dropdown-item" to='/contacto'> Contacto</Link></ul>
+                    <ul><Link to='/carrito'> <CartWidget/> </Link> </ul>
               </nav>
 
         <form className="d-flex">
