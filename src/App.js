@@ -5,7 +5,7 @@ import Ofertas from './components/Ofertas';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import Carrito from './components/Carrito';
-import ItemDetalle from './components/ItemDetalle';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 //import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -28,13 +28,14 @@ function App(props) {
 
       <main className="App-main"> 
       <Routes>
-         <Route exact path="/" element={<Inicio/>}/>  
+         <Route exact path="/" element={<ItemListContainer/>}/>  
+         <Route exact path="/inicio" element={<Inicio/>}/>  
          <Route exact path="/productos" element={<ItemListContainer/>}/>  
          <Route exact path="/ofertas" element={<Ofertas/>}/>  
          <Route exact path="/nosotros" element={<Nosotros/>}/>  
          <Route exact path="/contacto" element={<Contacto/>}/>  
          <Route exact path="/carrito" element={<Carrito/>}/>  
-         <Route exact path="/productos/:codigo" element={<ItemDetalle/>}/>  
+         <Route exact path="/productos/:codigo" element={<ItemDetailContainer/>}/>  
       </Routes>
       <br></br>
       

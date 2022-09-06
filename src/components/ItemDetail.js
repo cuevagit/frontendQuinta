@@ -1,4 +1,4 @@
-const Detalle = ( {prods}) => {
+const ItemDetail = ( {prods}) => {
     return (
       <div  className="card w-96 bg-base-100 shadow-xl px-6 py-6">
         { prods.length ? (prods.map( p =>
@@ -10,6 +10,7 @@ const Detalle = ( {prods}) => {
                 <h5> <strong>Características: </strong></h5>  
                 <h5> <strong> {p.detalle} </strong></h5>  
                 <h5> <strong> Estado: {p.estado} </strong></h5>  
+                <h5> <strong> Precio: {p.precio} </strong></h5>  
             </div>
           )) : (<h1>Loading...</h1>)  
         }
@@ -17,4 +18,4 @@ const Detalle = ( {prods}) => {
     )
   }
   
-  export default Detalle
+  export default ItemDetail

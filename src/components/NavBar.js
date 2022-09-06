@@ -19,8 +19,8 @@ const NavBar = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
 
                     <ul><img src={logo} className="App-logo" alt="logo" /></ul>
-                    <ul>Armeria "La Liebre"</ul>
-                    <ul><Link className="dropdown-item" to='/'>Inicio</Link></ul>
+                    <ul className="brand"> <Link className="dropdown-item" to='/'>Armeria "La Liebre"</Link></ul>
+                    <ul><Link className="dropdown-item" to='/inicio'>Inicio</Link></ul>
                     <ul><Link className="dropdown-item" to='/productos'> Productos</Link></ul>
                     <ul><Link className="dropdown-item" to='/ofertas'> Ofertas</Link></ul>
                     <ul><Link className="dropdown-item" to='/nosotros'> Nosotros</Link></ul>
