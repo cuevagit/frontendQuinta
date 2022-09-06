@@ -5,10 +5,11 @@ const ItemDetail = ( {prods}) => {
             <div>
                 <br></br>
                 <img className= "imagen_detalle" src={'.' + p.img} alt="Imagen producto"/>
-                <h5> <strong>Producto: </strong>{p.tipo},  <strong>Marca: </strong> {p.marca} </h5>  
+                <h5> <strong>Producto: </strong>{p.tipo}</h5> 
+                <h5> <strong>Marca: </strong> {p.marca} </h5>  
                 <br></br>
                 <h5> <strong>Características: </strong></h5>  
-                <h5> <strong> {p.detalle} </strong></h5>  
+                <h5 className="textoDescripcion"> <strong> {p.detalle} </strong></h5>  
                 <h5> <strong> Estado: {p.estado} </strong></h5>  
                 <h5> <strong> Precio: {p.precio} </strong></h5>  
             </div>
