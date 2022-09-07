@@ -1,7 +1,6 @@
 import Inicio from './components/Inicio';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-//import Ofertas from './components/Ofertas';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import Carrito from './components/Carrito';

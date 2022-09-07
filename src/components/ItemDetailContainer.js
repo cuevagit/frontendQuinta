@@ -45,13 +45,12 @@ const ItemDetailContainer = () => {
    .catch(error => console.error("Se produjo un error: " + error));
 }, [])*/
 
-
       return (
         <>
           <div className="container"> 
           <br></br>   
           <div><strong>Detalle del Producto</strong></div>
-          <ItemDetail prods={prods.filter(p => p.codigo === codigo)}/> 
+          <ItemDetail prods={prods.filter((p) => p.codigo === codigo)}/> 
           <br></br>  <br></br> 
           </div>
         </>
