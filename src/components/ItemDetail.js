@@ -1,11 +1,11 @@
 const ItemDetail = ( {prods}) => {
     return (
       <div  className="card w-96 bg-base-100 shadow-xl px-6 py-6">
-        { prods.length ? (prods.map( p =>
-            <div>
+        { prods.length ? (prods.map( p => 
+            <div key={p.codigo} >
                 <br></br>
-                <img className= "imagen_detalle" src={'.' + p.img} alt="Imagen producto"/>
-                <h5> <strong>Producto: </strong>{p.tipo}</h5> 
+                <img className= "imagen_detalle" src={'' + p.img} alt="Imagen producto"/>
+                <h5> <strong> Producto: </strong>{p.tipo}</h5> 
                 <h5> <strong>Marca: </strong> {p.marca} </h5>  
                 <br></br>
                 <h5> <strong>Características: </strong></h5>  

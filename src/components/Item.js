@@ -29,7 +29,7 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
    <>      
         <div className="card w-96 bg-base-100 shadow-xl px-6 py-6">
 
-        <Link to={'/productos/' + codigo}>
+        <Link to={'/item/' + codigo}>
           <strong>{tipo}</strong>
           <img className= "imagen" src={img} alt="Imagen producto"/>
           <h6>Marca: {marca} </h6>

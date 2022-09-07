@@ -10,20 +10,7 @@ const ItemDetailContainer = () => {
     const { codigo } = useParams()
 
   
-    useEffect(() => {
-
-   //los traigo usando la función de tipo Promise getItem
-    const getItem = (datos, time) =>
-     new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (datos) {
-          resolve(datos);
-        } else {
-          reject("Error");
-        }
-      }, time);
-    });
-      
+    useEffect(() => {     
      getItem(productosJson , 2000)
       .then((datos) => {
         setProds(datos);
@@ -31,6 +18,19 @@ const ItemDetailContainer = () => {
       .catch((err) => console.log(err, ": no hay productos"));
   }, []);
 
+     //los traigo usando la función de tipo Promise getItem
+     const getItem = (datos, time) => {
+      return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (datos) {
+          resolve(datos);
+        } else {
+          reject("Error");
+        }
+      }, time);
+      
+    }
+    )};
 
   //En caso de querer usar Fetch:
         //Traigo los datos del archivo Json usando Fecth
@@ -51,7 +51,7 @@ const ItemDetailContainer = () => {
           <div className="container"> 
           <br></br>   
           <div><strong>Detalle del Producto</strong></div>
-          <ItemDetail prods={prods.filter((p) => p.codigo === codigo )}/> 
+          <ItemDetail prods={prods.filter(p => p.codigo === codigo)}/> 
           <br></br>  <br></br> 
           </div>
         </>

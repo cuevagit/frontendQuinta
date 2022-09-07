@@ -1,7 +1,7 @@
 import Inicio from './components/Inicio';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import Ofertas from './components/Ofertas';
+//import Ofertas from './components/Ofertas';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import Carrito from './components/Carrito';
@@ -31,11 +31,12 @@ function App(props) {
          <Route exact path="/" element={<ItemListContainer/>}/>  
          <Route exact path="/inicio" element={<Inicio/>}/>  
          <Route exact path="/productos" element={<ItemListContainer/>}/>  
-         <Route exact path="/ofertas" element={<Ofertas/>}/>  
+         <Route exact path="/productos/:categoryId" element={<ItemListContainer/>}/>  
          <Route exact path="/nosotros" element={<Nosotros/>}/>  
          <Route exact path="/contacto" element={<Contacto/>}/>  
          <Route exact path="/carrito" element={<Carrito/>}/>  
-         <Route exact path="/productos/:codigo" element={<ItemDetailContainer/>}/>  
+         <Route exact path="/item/:codigo" element={<ItemDetailContainer/>}/>  
+         <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
       </Routes>
       <br></br>
       
