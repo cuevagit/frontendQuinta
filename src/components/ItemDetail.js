@@ -8,12 +8,15 @@ const ItemDetail = ( {prods}) => {
                 <br></br>
                 <img className= "imagen_detalle" src={'' + prods[0].img} alt="Imagen producto"/>
                 <h5> <strong> Producto: </strong>{prods[0].tipo}</h5> 
+                <br></br>
                 <h5> <strong>Marca: </strong> {prods[0].marca} </h5>  
                 <br></br>
                 <h5> <strong>Características: </strong></h5>  
-                <h5 className="textoDescripcion"> <strong> {prods[0].detalle} </strong></h5>  
-                <h5> <strong> Estado: {prods[0].estado} </strong></h5>  
-                <h5> <strong> Precio: {prods[0].precio} </strong></h5>  
+                <h5 className="textoDescripcion">{prods[0].detalle} </h5> 
+                <br></br> 
+                <h5> <strong> Estado: </strong> {prods[0].estado} </h5> 
+                <br></br> 
+                <h5> <strong> Precio: </strong> $ {prods[0].precio} </h5>  
             </div>
           ) : (<h1>Loading...</h1>)  
          }

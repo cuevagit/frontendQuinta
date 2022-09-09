@@ -2,7 +2,7 @@ import {useState} from "react"
 import { Button } from 'react-daisyui'
 import { Link } from 'react-router-dom';
 
-const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
+const Item = ( {codigo, slug, marca, tipo, precio, estado, stock, img} ) => {
 
   const [clicks, setClicks] = useState(0)
   const [ver, setVer] = useState(true)
@@ -27,9 +27,7 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
 
     return (
    <>      
-        <div className="card w-96 bg-base-100 shadow-xl px-6 py-6">
-
-     
+        <div className="card w-96 bg-base-100 shadow-xl px-6 py-6"> 
           <strong>{tipo}</strong>
           <img className= "imagen" src={img} alt="Imagen producto"/>
           <h6>Marca: {marca} </h6>
@@ -37,7 +35,7 @@ const Item = ( {codigo, marca, tipo, precio, estado, stock, img} ) => {
           <h6>Precio: {precio}</h6>
           <h6>Estado: {estado}</h6>
           <br></br>
-          <Link to={'/item/' + codigo}>
+          <Link to={'/item/' + slug}>
           <Button>Ver Detalle</Button>
           </Link>
           <br></br>

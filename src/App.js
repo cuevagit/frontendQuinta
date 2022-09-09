@@ -9,8 +9,6 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 //import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-/*<ItemListContainer/> */
-
 
 
 function App(props) {
@@ -34,7 +32,7 @@ function App(props) {
          <Route exact path="/nosotros" element={<Nosotros/>}/>  
          <Route exact path="/contacto" element={<Contacto/>}/>  
          <Route exact path="/carrito" element={<Carrito/>}/>  
-         <Route exact path="/item/:codigo" element={<ItemDetailContainer/>}/>  
+         <Route exact path="/item/:slug" element={<ItemDetailContainer/>}/>  
          <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
       </Routes>
       <br></br>

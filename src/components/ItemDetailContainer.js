@@ -6,17 +6,16 @@ import productosJson from "../productos.json";
 
 const ItemDetailContainer = () => {
 
-    const [prods, setProds] = useState([])
-    const { codigo } = useParams()
+  const [prods, setProds] = useState([])
+  const { slug } = useParams()
 
-  
-    useEffect(() => {     
-     getItem(productosJson , 2000)
+      useEffect(() => {     
+     getItem(productosJson, 2000)
       .then((datos) => {
         setProds(datos);
       })
       .catch((err) => console.log(err, ": no hay productos"));
-  }, []);
+     }, []);
 
      //los traigo usando la función de tipo Promise getItem
      const getItem = (datos, time) => {
@@ -28,10 +27,9 @@ const ItemDetailContainer = () => {
           reject("Error");
         }
       }, time);
-      
     }
     )};
-
+  
   //En caso de querer usar Fetch:
         //Traigo los datos del archivo Json usando Fecth
   //fetch('http://localhost:3000/productos.json' )
@@ -50,7 +48,7 @@ const ItemDetailContainer = () => {
           <div className="container"> 
           <br></br>   
           <div><strong>Detalle del Producto</strong></div>
-          <ItemDetail prods={prods.filter((p) => p.codigo === codigo)}/> 
+          <ItemDetail prods={prods.filter(p => p.slug === slug)}/> 
           <br></br>  <br></br> 
           </div>
         </>

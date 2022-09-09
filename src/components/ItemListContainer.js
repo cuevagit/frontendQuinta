@@ -43,11 +43,12 @@ const ItemListContainer = () => {
       .catch(error => console.error("Se produjo un error: " + error));
   }, [])*/
 
+
     return (
       <>
         <div className="container"> 
         <br></br>   
-        <div>Listado de Productos</div>
+        <div><strong>{categoryId ? ("Listado de " + categoryId) : ("Listado de productos")}</strong></div>
         {categoryId === undefined ?  
           (<ItemList prods={prods}/>)  :   
           (categoryId === 'ofertas' ? (<ItemList prods={prods.filter(p => p.oferta === 'S')}/>) :

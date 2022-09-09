@@ -23,8 +23,8 @@ const NavBar = () => {
                     <ul><Link className="dropdown-item" to='/inicio'>Inicio</Link></ul>
                     <ul><Link className="dropdown-item" to='/productos'> Productos</Link></ul>
                     <ul><Link className="dropdown-item" to='/productos/ofertas'> Ofertas</Link></ul>
-                    <ul><Link className="dropdown-item" to='/category/Municiones'> Municiones</Link></ul>
-                    <ul><Link className="dropdown-item" to='/category/Armas'> Armas</Link></ul>
+                    <ul><Link className="dropdown-item" to='/category/municiones'> Municiones</Link></ul>
+                    <ul><Link className="dropdown-item" to='/category/armas'> Armas</Link></ul>
                     <ul><Link className="dropdown-item" to='/nosotros'> Nosotros</Link></ul>
                     <ul><Link className="dropdown-item" to='/contacto'> Contacto</Link></ul>
                     <ul><Link to='/carrito'> <CartWidget/> </Link> </ul>
