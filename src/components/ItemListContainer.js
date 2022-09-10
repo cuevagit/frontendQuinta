@@ -9,14 +9,14 @@ const ItemListContainer = () => {
   const { categoryId } = useParams()
 
   useEffect(() => {     
-    getItem(productosJson , 2000)
+    getDatos(productosJson , 2000)
      .then((datos) => {
        setProds(datos);
      })
      .catch((err) => console.log(err, ": no hay productos"));
  }, []);
 
- const getItem = (datos, time) => {
+ const getDatos = (datos, time) => {
   return new Promise((resolve, reject) => {
   setTimeout(() => {
     if (datos) {
