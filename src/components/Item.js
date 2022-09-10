@@ -2,7 +2,7 @@ import {useState} from "react"
 import { Button } from 'react-daisyui'
 import { Link } from 'react-router-dom';
 
-const Item = ( {codigo, slug, marca, tipo, precio, estado, stock, img} ) => {
+const Item = ( {slug, marca, tipo, precio, estado, stock, img} ) => {
 
   const [clicks, setClicks] = useState(0)
   const [ver, setVer] = useState(true)
