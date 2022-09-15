@@ -14,7 +14,7 @@ const ItemList = ( {prods}) => {
           <Item key={p.codigo} codigo={p.codigo} slug={p.slug} marca={p.marca} 
           tipo={p.tipo} precio={p.precio} estado={p.estado}  stock={p.stock} img={p.img}/>
         
-          )) : (   <h1>Loading...</h1>)  
+          )) : (  <p className="mensaje"> <h1>Loading...</h1></p>)  
         }
       </div>
     )

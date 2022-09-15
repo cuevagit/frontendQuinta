@@ -1,8 +1,34 @@
-const ItemDetail = ( {prods}) => {
-    return (
-     <>
-        <div  className="card w-96 bg-base-100 shadow-xl px-6 py-6">
+import { useState, useContext } from "react"
+import { Button } from "react-daisyui";
+import { Link } from 'react-router-dom';
+import ItemCount from "./ItemCount";
+import CartContext from './context/CartContext';
 
+const ItemDetail = ( {prods}) => {
+
+ //const mostrar = useContext(CartContext)
+ const {addItem} = useContext(CartContext)
+ //const {item} = useContext(CartContext)
+
+ //console.log(mostrar)
+ //console.log(item)
+
+
+  const [quantitytoadd, setQuantitytoadd] = useState(0)
+
+    function onAdd(cantidad){
+     setQuantitytoadd(cantidad) 
+     addItem(prods, cantidad)
+  }
+
+    //console.log(prods)  
+
+
+    return (
+      <>
+    <div>
+    </div>
+        <div  className="card w-96 bg-base-100 shadow-xl px-6 py-6">
         { prods.length ? (
             <div key={prods[0].codigo} >
                 <br></br>
@@ -17,8 +43,20 @@ const ItemDetail = ( {prods}) => {
                 <h5> <strong> Estado: </strong> {prods[0].estado} </h5> 
                 <br></br> 
                 <h5> <strong> Precio: </strong> $ {prods[0].precio} </h5>  
+                <br></br> 
+                <h5> <strong> Stock: </strong> {prods[0].stock} </h5> 
+                <br></br> 
+                <h5> <strong> Cantidad a comprar: </strong> {quantitytoadd} </h5> 
+                <br></br> 
+                {quantitytoadd === 0 ? 
+                (<ItemCount onAdd={onAdd} stock={prods[0].stock} initial="1"/>) : 
+                (<Link to={'/Carrito/'}><Button> Terminar Compra</Button></Link>)
+                }
+                <br></br>
+                <br></br> 
             </div>
-          ) : (<h1>Loading...</h1>)  
+            
+          ) : (<p><h1>Loading...</h1></p>)  
          }
       </div>
       </>

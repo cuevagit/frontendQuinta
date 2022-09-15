@@ -1,9 +1,12 @@
 //import {useState} from "react"
 import { Button } from 'react-daisyui'
 import { Link } from 'react-router-dom';
+import { useContext } from "react"
+import CartContext from './context/CartContext';
 
-const Item = ( {slug, marca, tipo, precio, estado, stock, img} ) => {
+const ItemCarrito = ( {codigo, slug, marca, tipo, precio, estado, stock, cantidad, img} ) => {
 
+    const {removeItem} = useContext(CartContext)
 
     return (
    <>      
@@ -14,10 +17,15 @@ const Item = ( {slug, marca, tipo, precio, estado, stock, img} ) => {
           <h6>Stock: {stock} </h6>
           <h6>Precio: {precio}</h6>
           <h6>Estado: {estado}</h6>
+          <h6>Cantidad: {cantidad}</h6>
           <br></br>
           <Link to={'/item/' + slug}>
           <Button>Ver Detalle</Button>
           </Link>
+          <br></br>
+          <br></br>
+          <Button onClick={(() => removeItem(codigo))}>Eliminar</Button>
+          
           <br></br><br></br>
       </div>
   </>
@@ -25,4 +33,4 @@ const Item = ( {slug, marca, tipo, precio, estado, stock, img} ) => {
     )
   }
 
-  export default Item
+  export default ItemCarrito

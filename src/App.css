@@ -175,14 +175,14 @@ a:hover, a:focus {
  margin-right: 15px;
 }
 
-.carrito{
-  height: 75vh;
-  width: max-content;
+/*.carrito{
+    /*height: max-content;
+  /*width: max-content;
   justify-content: center;
-  display: flex;
-  margin-left: 500px;
-  margin-top: 137px;
-}
+ /* display: flex;
+  margin-left: 180px;
+  margin-top: 40px;
+}*/
 
 .brand{
   margin-right: 50px;
@@ -192,4 +192,18 @@ a:hover, a:focus {
   text-align: justify;
   margin-left: 300px;
   margin-right: 300px;
+ }
+
+ .productoscarrito{
+   margin-top: 100px;
+   margin-left: 50px;
+   display: flex;
+ }
+
+ .listadocarrito{
+   height: max-content;
+ }
+
+ .mensaje{
+  height: 75vh;
  }

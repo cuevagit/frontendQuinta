@@ -8,6 +8,8 @@ const ItemListContainer = () => {
   const [prods, setProds] = useState([])
   const { categoryId } = useParams()
 
+
+
   useEffect(() => {     
     getDatos(productosJson , 2000)
      .then((datos) => {

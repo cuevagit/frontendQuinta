@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 //import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './components/context/CartContext';
 
 
 function App(props) {
@@ -24,6 +25,7 @@ function App(props) {
       </header>
 
       <main className="App-main"> 
+      <CartProvider>
       <Routes>
          <Route exact path="/" element={<ItemListContainer/>}/>  
          <Route exact path="/inicio" element={<Inicio/>}/>  
@@ -35,6 +37,8 @@ function App(props) {
          <Route exact path="/item/:slug" element={<ItemDetailContainer/>}/>  
          <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
       </Routes>
+      </CartProvider>
+
       <br></br>
       
      </main>
