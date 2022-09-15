@@ -21,19 +21,23 @@ function Carrito(){
 
      <div >        
 
-     <h1><strong>Desea eliminar todos los productos del carrito?</strong></h1>
+     <h1>Desea eliminar todos los productos del carrito?</h1>
+
      </div>
 
      <p>
         <Button onClick={clear}>Eliminar Todos los Productos del Carrito  </Button>
      </p>
-  <div className="listadocarrito">
-     { items.length ? (items.map( p =>
-        
+
+     
+      <div className="listadocarrito">
+         <br></br>
+      <h1>De lo contrario elija cual eliminar</h1>
+
+     { items.length ?  (items.map( p =>
         <ItemCarrito key={p.codigo} codigo={p.codigo} slug={p.slug} marca={p.marca} 
         tipo={p.tipo} precio={p.precio} estado={p.estado} cantidad={p.cantidad} stock={p.stock} img={p.img}/>
-      
-        )) : (  <p className="mensaje"> <h1>No hay productos... </h1></p>)  
+        )) : (  <p className="mensaje"> <br></br> <h1><strong>No hay productos... </strong></h1></p>)  
      }
      </div>
    </div>

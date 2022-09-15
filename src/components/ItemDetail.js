@@ -56,7 +56,7 @@ const ItemDetail = ( {prods}) => {
                 <br></br> 
             </div>
             
-          ) : (<p><h1>Loading...</h1></p>)  
+          ) : (<p className="mensaje"><h1>Loading...</h1></p>)  
          }
       </div>
       </>
