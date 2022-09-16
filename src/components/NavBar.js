@@ -5,13 +5,11 @@ import logo from '../logocazasinfondo.png';
 import { Link } from 'react-router-dom';
 
 
+//Armo la barra de navegación
 const NavBar = () => {
     
-  return (
-    
+  return ( 
     <main>  
-
-
     <div className="container">
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -29,8 +27,7 @@ const NavBar = () => {
                     <ul><Link className="dropdown-item" to='/contacto'> Contacto</Link></ul>
                     <ul><Link to='/carrito'> <CartWidget/> </Link> </ul>
               </nav>
-
-        <form className="d-flex">
+          <form className="d-flex">
         </form>
     </div>
   

@@ -4,25 +4,17 @@ import { Link } from 'react-router-dom';
 import ItemCount from "./ItemCount";
 import CartContext from './context/CartContext';
 
+//Detalle del producto
 const ItemDetail = ( {prods}) => {
 
- //const mostrar = useContext(CartContext)
  const {addItem} = useContext(CartContext)
- //const {item} = useContext(CartContext)
+ const [quantitytoadd, setQuantitytoadd] = useState(0)
 
- //console.log(mostrar)
- //console.log(item)
-
-
-  const [quantitytoadd, setQuantitytoadd] = useState(0)
-
+    //Agrego producto al carito
     function onAdd(cantidad){
      setQuantitytoadd(cantidad) 
      addItem(prods, cantidad)
   }
-
-    //console.log(prods)  
-
 
     return (
       <>
@@ -54,8 +46,7 @@ const ItemDetail = ( {prods}) => {
                 }
                 <br></br>
                 <br></br> 
-            </div>
-            
+            </div>      
           ) : (<p className="mensaje"><h1>Loading...</h1></p>)  
          }
       </div>

@@ -1,5 +1,6 @@
 function Nosotros(){
 
+    //Datos de la Empresa
     return(
         <div className="nosotros">
         <p className="textoNosotros">      

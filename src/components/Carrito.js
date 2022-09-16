@@ -12,12 +12,12 @@ function Carrito(){
     const {prods} = useContext(ProdsContext)
     const {resetear} = useContext(ProdsContext)
 
-   // console.log(items.length)
-    //console.log(items)
-
+    //Calculo el total gastado, más el total de la cantidad comprada, para mostrar en el 
+    //Detalle del Carrito
     const totalfull = items.reduce((acumulador, items) => acumulador + Number(items.precio) * items.cantidad, 0)
     const cantcaprada = items.reduce((acumulador, items) => acumulador + items.cantidad, 0)
 
+    //Doy la posibilidad de eliminar uno en particular, o todos, ejecutando las funciones correspondientes
     return(
     <>
      <br></br>
@@ -26,11 +26,11 @@ function Carrito(){
 
      <div >        
 
-     <h1>Desea eliminar todos los productos del carrito?</h1>
+     <h1>Desea eliminar todos los productos del carrito? </h1>
 
      </div>
 
-     <p>
+     <p> 
         <Button onClick={() => {clear(); resetear(items, prods); }}>Eliminar Todos los Productos del Carrito  </Button>
      </p>
      
@@ -48,7 +48,7 @@ function Carrito(){
       {items.length ? ( <div className="card"><strong>Resumen del Carrito: <br></br></strong>
       <p className="detalleCarrito">
        <h3>Cantidad comprada: {cantcaprada}</h3>
-       <h3>Costo total: {totalfull}</h3>
+       <h3>Costo total: $ {totalfull}</h3>
        </p>
        <br></br></div>) : ("")}
      </div>

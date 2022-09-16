@@ -1,9 +1,6 @@
 import Item from './Item'
-//import { Link } from 'react-router-dom';
 
-/*<Link to={'/productos/' + p.codigo}>
-</Link>*/
-
+//Recorro los productos y llamo al item
 const ItemList = ( {prods}) => {
     return (
       

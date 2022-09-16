@@ -4,53 +4,18 @@ import ItemList from './ItemList'
 import productosJson from "../productos.json";
 import ProdsContext from './context/ProdsContext';
 
+
+//Cargo datos desde el archivo Json y llamo al ItemList
 const ItemListContainer = () => {
 
-  //const [prods, setProds] = useState([])
   const { categoryId } = useParams()
-
-
   const {prods} = useContext(ProdsContext)
   const {cargar} = useContext(ProdsContext) 
 
   useEffect(() => {    
-
-   /* getDatos(productosJson , 2000)
-     .then((datos) => {
-       setProds(datos);
-     })
-     .catch((err) => console.log(err, ": no hay productos"));*/
      cargar(productosJson);
      //eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
-
-/* const getDatos = (datos, time) => {
-  return new Promise((resolve, reject) => {
-  setTimeout(() => {
-    if (datos) {
-      resolve(datos);
-    } else {
-      reject("Error");
-    }
-  }, time);
-  
-}
-)};*/
-  
-//En caso de querer usar fetch
- /* useEffect(() => {
-
-    //Traigo los datos del archivo Json
-    fetch('../productos.json')
-      .then( resp => resp.json() )
-      .then( datos => {
-       setTimeout(() => {
-          setProds(datos)
-        }, 2000);
-      })
-      .catch(error => console.error("Se produjo un error: " + error));
-  }, [])*/
-
 
     return (
       <>
@@ -68,4 +33,5 @@ const ItemListContainer = () => {
       </>
     )
   }
+
   export default ItemListContainer

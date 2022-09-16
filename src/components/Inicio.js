@@ -1,5 +1,6 @@
 const Inicio = ( ) => {
 
+  //Mensaje de Bienvenida
         return (
   
         <div className="inicio">

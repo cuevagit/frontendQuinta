@@ -1,16 +1,16 @@
 import { useState } from "react"
 import { Button } from 'react-daisyui'
 
-
+//Traigo botones + - con la cantidad de clicks y llamo función onAdd
 function ItemCount({onAdd, stock, initial}){
     const [clicks, setClicks] = useState(Number(initial))
     const [ver, setVer] = useState(false)
 
 
     function sumar(){
-     //console.log(event)
-     if(stock > 0)
-      setVer(false)
+
+      if(stock > 0)
+       setVer(false)
   
      if(clicks < stock){
       setClicks(clicks + 1)
@@ -21,7 +21,6 @@ function ItemCount({onAdd, stock, initial}){
       if(clicks>0)
        setClicks(clicks - 1)
       
-      // if(clicks===1)
       if(clicks===1)
         setVer(true)
     }

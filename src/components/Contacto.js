@@ -1,5 +1,6 @@
 function Contacto(){
 
+    //Datos de contacto
     return(
         <div className="contacto">
         <p className="card w-96 bg-base-100 shadow-xl px-6 py-6 textoContacto">      

@@ -6,7 +6,6 @@ import Contacto from './components/Contacto';
 import Carrito from './components/Carrito';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
-//import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/context/CartContext';

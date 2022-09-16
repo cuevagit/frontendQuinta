@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import ItemDetail from './ItemDetail'
 import productosJson from "../productos.json";
 
-
+//Cargo datos desde el archivo Json y llamo al itemDetail
 const ItemDetailContainer = () => {
 
   const [prods, setProds] = useState([])
