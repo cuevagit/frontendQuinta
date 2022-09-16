@@ -21,6 +21,7 @@ const ItemListContainer = () => {
      })
      .catch((err) => console.log(err, ": no hay productos"));*/
      cargar(productosJson);
+     //eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
 
 /* const getDatos = (datos, time) => {
