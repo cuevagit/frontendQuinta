@@ -207,3 +207,7 @@ a:hover, a:focus {
  .mensaje{
   height: 75vh;
  }
+
+ .detalleCarrito{
+   text-align: left;
+ }

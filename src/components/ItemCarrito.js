@@ -13,7 +13,9 @@ const ItemCarrito = ( {codigo, slug, marca, tipo, precio, estado, stock, cantida
     const {prods} = useContext(ProdsContext)
     const {stockf} = useContext(ProdsContext)
 
-    console.log(prods)
+    const total = precio * cantidad 
+
+    //console.log(prods)
     //stockf(prods, items, codigo)
    // (() => stockf(prods, items, codigo))
    //<Button onClick={() => {removeItem(codigo); stockf(prods, items, codigo);}}>Eliminar</Button>          
@@ -25,18 +27,20 @@ const ItemCarrito = ( {codigo, slug, marca, tipo, precio, estado, stock, cantida
           <img className= "imagen" src={img} alt="Imagen producto"/>
           <h6>Marca: {marca} </h6>
           <h6>Stock: {stock} </h6>
-          <h6>Precio: {precio}</h6>
           <h6>Estado: {estado}</h6>
+          <h6>Precio Unitario: {precio}</h6>
           <h6>Cantidad: {cantidad}</h6>
+          <h6>Precio Total: {total} </h6>
           <br></br>
           <Link to={'/item/' + slug}>
           <Button>Ver Detalle</Button>
           </Link>
           <br></br>
           <br></br>
-          <Button onClick={() => {stockf(prods, items, codigo); removeItem(codigo); }}>Eliminar</Button>          
-
-          <br></br><br></br>
+          <Button onClick={() => {stockf(prods, items, codigo); removeItem(codigo); }}>Eliminar</Button>   
+          
+          <div></div>       
+          <br></br>
       </div>
   </>
 

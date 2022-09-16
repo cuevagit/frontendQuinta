@@ -15,6 +15,9 @@ function Carrito(){
    // console.log(items.length)
     //console.log(items)
 
+    const totalfull = items.reduce((acumulador, items) => acumulador + Number(items.precio) * items.cantidad, 0)
+    const cantcaprada = items.reduce((acumulador, items) => acumulador + items.cantidad, 0)
+
     return(
     <>
      <br></br>
@@ -41,7 +44,14 @@ function Carrito(){
          )) : (  <p className="mensaje"> <br></br> <h1><strong>No hay productos... </strong></h1></p>)  
      }
      </div>
-   </div>
+
+      {items.length ? ( <div className="card"><strong>Resumen del Carrito: <br></br></strong>
+      <p className="detalleCarrito">
+       <h3>Cantidad comprada: {cantcaprada}</h3>
+       <h3>Costo total: {totalfull}</h3>
+       </p>
+       <br></br></div>) : ("")}
+     </div>
     </>
    )
 }
