@@ -1,24 +1,29 @@
-import { useEffect, useState } from "react"
+import { useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList'
 import productosJson from "../productos.json";
+import ProdsContext from './context/ProdsContext';
 
 const ItemListContainer = () => {
 
-  const [prods, setProds] = useState([])
+  //const [prods, setProds] = useState([])
   const { categoryId } = useParams()
 
 
+  const {prods} = useContext(ProdsContext)
+  const {cargar} = useContext(ProdsContext) 
 
-  useEffect(() => {     
-    getDatos(productosJson , 2000)
+  useEffect(() => {    
+
+   /* getDatos(productosJson , 2000)
      .then((datos) => {
        setProds(datos);
      })
-     .catch((err) => console.log(err, ": no hay productos"));
+     .catch((err) => console.log(err, ": no hay productos"));*/
+     cargar(productosJson);
  }, []);
 
- const getDatos = (datos, time) => {
+/* const getDatos = (datos, time) => {
   return new Promise((resolve, reject) => {
   setTimeout(() => {
     if (datos) {
@@ -29,7 +34,7 @@ const ItemListContainer = () => {
   }, time);
   
 }
-)};
+)};*/
   
 //En caso de querer usar fetch
  /* useEffect(() => {

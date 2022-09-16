@@ -29,9 +29,7 @@ const CartProvider = ({defaultValue=[], children}) => {
       } else {
         item[0].cantidad = quantity
         item[0].stock = item[0].stock - quantity
-        //setItems([...items, {...item, cantidad}])
-       // setItems([...items, {...item}])
-       //setItems([...items, {...item}])
+
        setItems( prevState => prevState.concat(item) )
       }
       //console.log(items.codigo)

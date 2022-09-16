@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/context/CartContext';
+import { ProdsProvider } from './components/context/ProdsContext';
 
 
 function App(props) {
@@ -25,6 +26,7 @@ function App(props) {
       </header>
 
       <main className="App-main"> 
+      <ProdsProvider>
       <CartProvider>
       <Routes>
          <Route exact path="/" element={<ItemListContainer/>}/>  
@@ -38,6 +40,7 @@ function App(props) {
          <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
       </Routes>
       </CartProvider>
+      </ProdsProvider>
 
       <br></br>
       
