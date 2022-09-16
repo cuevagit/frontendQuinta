@@ -40,10 +40,17 @@ const ItemDetail = ( {prods}) => {
                 <br></br> 
                 <h5> <strong> Cantidad a comprar: </strong> {quantitytoadd} </h5> 
                 <br></br> 
+                
+                <div p="botones">
                 {quantitytoadd === 0 ? 
                 (<ItemCount onAdd={onAdd} stock={prods[0].stock} initial="1"/>) : 
-                (<Link to={'/Carrito/'}><Button> Terminar Compra</Button></Link>)
+                (<Link to={'/Carrito/'}><Button> Terminar Compra</Button> </Link>)
                 }
+                {quantitytoadd > 0 ? (
+                <Link to={'/productos/'}><Button> Seguir Comprando</Button></Link>) : ( "" )
+                }
+                </div>
+                 
                 <br></br>
                 <br></br> 
             </div>      

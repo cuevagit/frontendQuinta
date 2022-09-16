@@ -197,3 +197,9 @@ a:hover, a:focus {
  .detalleCarrito{
    text-align: left;
  }
+
+ .botones{
+   align-items: flex-start;
+   position: relative;
+   display: flex;
+ }
