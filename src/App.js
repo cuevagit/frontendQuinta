@@ -18,16 +18,15 @@ function App(props) {
   return (
     <>
     <BrowserRouter> 
-  
+    <ProdsProvider>
+      <CartProvider>
       <div className="App">
       <header className="App-header"> 
       <NavBar></NavBar>  
       </header>
 
       <main className="App-main"> 
-      <ProdsProvider>
-      <CartProvider>
-      <Routes>
+        <Routes>
          <Route exact path="/" element={<ItemListContainer/>}/>  
          <Route exact path="/inicio" element={<Inicio/>}/>  
          <Route exact path="/productos" element={<ItemListContainer/>}/>  
@@ -38,13 +37,11 @@ function App(props) {
          <Route exact path="/item/:slug" element={<ItemDetailContainer/>}/>  
          <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
       </Routes>
-      </CartProvider>
-      </ProdsProvider>
-
       <br></br>
-      
      </main>
     </div>
+    </CartProvider>
+    </ProdsProvider>
 
     <footer className="App-footer">
        <h5>Cueva Martin © 2022 </h5>  

@@ -3,17 +3,23 @@ import { Button } from "react-daisyui";
 import { Link } from 'react-router-dom';
 import ItemCount from "./ItemCount";
 import CartContext from './context/CartContext';
+import Spinner from './Spinner';
+
 
 //Detalle del producto
 const ItemDetail = ( {prods}) => {
 
  const {addItem} = useContext(CartContext)
  const [quantitytoadd, setQuantitytoadd] = useState(0)
+ const {sumar} = useContext(CartContext)
+ const {cantidadactual} = useContext(CartContext)
+
 
     //Agrego producto al carito
     function onAdd(cantidad){
      setQuantitytoadd(cantidad) 
      addItem(prods, cantidad)
+     sumar(cantidadactual, cantidad)
   }
 
     return (
@@ -54,7 +60,7 @@ const ItemDetail = ( {prods}) => {
                 <br></br>
                 <br></br> 
             </div>      
-          ) : (<p className="mensaje"><h1>Loading...</h1></p>)  
+          ) : (<Spinner/>)  
          }
       </div>
       </>

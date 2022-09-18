@@ -13,7 +13,7 @@ const ItemListContainer = () => {
   const {cargar} = useContext(ProdsContext) 
 
   useEffect(() => {    
-     cargar(productosJson);
+      cargar(productosJson);
      //eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
 
