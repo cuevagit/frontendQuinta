@@ -8,11 +8,18 @@ const CartWidget = () => {
   const {cantidadactual} = useContext(CartContext)
 
     return (
+    
       <div className="dropdown-item">   
-      <div className="badge">
-        <IoCartOutline/>{cantidadactual}
-     </div>
+    
+       {cantidadactual ? 
+            <>
+        <IoCartOutline/><p className="badge cantcart">{cantidadactual}</p>
+        </>
+        : null
+       }
+
       </div>
+    
     )
   }
   export default CartWidget

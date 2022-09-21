@@ -1,5 +1,6 @@
 import { useState } from "react"
 import React from "react";
+import {collection, getDocs, getFirestore, query, where} from "firebase/firestore";
 
 const ProdsContext = React.createContext([])
 
@@ -10,8 +11,11 @@ const ProdsProvider = ({defaultValue=[], children}) => {
   //Paso la lógica que trae los datos de los productos al Json a este Provider Custimizado, 
   //para tenerlos disponibles en otros componentes
     const [prods, setProds] = useState(defaultValue)
-    
-        const getDatos = (datos, time) => {
+
+   
+    //Trayendo datos del Json
+     /*   const getDatos = (datos, time) => {
+           //Trayendo del Json
             return new Promise((resolve, reject) => {
             setTimeout(() => {
               if (datos) {
@@ -22,15 +26,52 @@ const ProdsProvider = ({defaultValue=[], children}) => {
             }, time);
             
           }
-          )};
+        )
+      };*/
 
-    function cargar(productosJson) {
+ //   function cargar(productosJson) {
+  function cargar(categoryId) {
+          //Trayendo datos del Firebase
+        //categoryId = "armas"
+          const db = getFirestore();
 
-        getDatos(productosJson , 2000)
+          if (categoryId === 'ofertas'){ 
+            console.log("entró!!")
+             const q = query(collection(db, 'productos'), where('oferta', "==", 'S'));
+             getDocs(q).then((snapshot) => {
+              /* if(snapshot.exists()){*/
+             setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+          })     
+            } else {
+
+          if (categoryId) { 
+             const q = query(collection(db, 'productos'), where("categoria", "==", categoryId));
+
+            getDocs(q).then((snapshot) => {
+              /* if(snapshot.exists()){*/
+             setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+          })
+          } else {
+            const productos = collection(db, 'productos');
+            getDocs(productos).then((snapshot) => {
+              /* if(snapshot.exists()){*/
+             setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+             })
+           }
+          }
+          
+
+
+           // console.log(snapshot.data())
+          
+
+    //Trayendo datos del Json  
+      /*  getDatos(productosJson , 2000)
         .then((prods) => {
           setProds(prods);
         })
-        .catch((err) => console.log(err, ": no hay productos"));
+        .catch((err) => console.log(err, ": no hay productos"));*/
+
     }
 
      //Función para Cuando elimino un producto del carrito, vuelva esos productos al stock del producto 

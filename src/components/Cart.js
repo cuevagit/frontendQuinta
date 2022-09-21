@@ -3,9 +3,9 @@ import { useContext } from "react"
 import CartContext from './context/CartContext';
 import ProdsContext from './context/ProdsContext';
 import ItemCarrito from './ItemCarrito'
+import { Link } from 'react-router-dom';
 
-
-function Carrito(){
+function Cart(){
 
     const {clear} = useContext(CartContext)
     const {items} = useContext(CartContext)
@@ -52,7 +52,7 @@ function Carrito(){
      { items.length ?  (items.map( p =>
         <ItemCarrito key={p.codigo} codigo={p.codigo} slug={p.slug} marca={p.marca} 
         tipo={p.tipo} precio={p.precio} estado={p.estado} cantidad={p.cantidad} stock={p.stock} img={p.img}/>
-         )) : (  <p className="mensaje"> <br></br> <h1><strong>No hay productos en el carrito... </strong></h1></p>)  
+         )) : (  <p className="mensaje"> <br></br> <h1><strong>No hay productos en el carrito... </strong></h1><Link to={'/productos/'}><Button> Seguir Comprando</Button></Link></p> )  
      }
      </div>
 
@@ -67,4 +67,4 @@ function Carrito(){
    )
 }
 
-export default Carrito
+export default Cart

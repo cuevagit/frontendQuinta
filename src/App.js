@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
-import Carrito from './components/Carrito';
+import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
 import './App.css';
@@ -33,7 +33,7 @@ function App(props) {
          <Route exact path="/productos/:categoryId" element={<ItemListContainer/>}/>  
          <Route exact path="/nosotros" element={<Nosotros/>}/>  
          <Route exact path="/contacto" element={<Contacto/>}/>  
-         <Route exact path="/carrito" element={<Carrito/>}/>  
+         <Route exact path="/cart" element={<Cart/>}/>  
          <Route exact path="/item/:slug" element={<ItemDetailContainer/>}/>  
          <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
       </Routes>

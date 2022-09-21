@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList'
-import productosJson from "../productos.json";
+//import productosJson from "../productos.json";
 import ProdsContext from './context/ProdsContext';
 
 
@@ -12,22 +12,26 @@ const ItemListContainer = () => {
   const {prods} = useContext(ProdsContext)
   const {cargar} = useContext(ProdsContext) 
 
+
   useEffect(() => {    
-      cargar(productosJson);
+    //Llamo a la función que carga los datos, definida en el contexto de Productos: ProdsContext
+    // cargar(productosJson);
+   // console.log(categoryId)
+    cargar(categoryId);
+
      //eslint-disable-next-line react-hooks/exhaustive-deps
- }, []);
+ }, [categoryId]);
+
+
+ 
 
     return (
       <>
         <div className="container"> 
         <br></br>   
         <div><strong>{categoryId ? ("Listado de " + categoryId) : ("Listado de productos")}</strong></div>
-        {categoryId === undefined ?  
-          (<ItemList prods={prods}/>)  :   
-          (categoryId === 'ofertas' ? (<ItemList prods={prods.filter(p => p.oferta === 'S')}/>) :
-          (<ItemList prods={prods.filter(p => p.categoria === categoryId)}/>) 
-          )
-        }
+           <ItemList prods={prods}/>  
+    
           <br></br>  <br></br> 
         </div>
       </>

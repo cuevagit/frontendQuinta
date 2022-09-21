@@ -204,3 +204,21 @@ a:hover, a:focus {
    position: relative;
    display: flex;
  }
+
+ .dropdown-item{
+  opacity: 1
+ }
+
+ .badge{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0.5px;
+  padding-bottom: 1px;
+ /* -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;*/
+  margin-top: -30px;
+  margin-left: 3px;
+  position: absolute;
+  opacity: 0.8
+ }

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.ac062818.css",
-    "main.js": "/static/js/main.5555091d.js",
+    "main.css": "/static/css/main.1fe56a77.css",
+    "main.js": "/static/js/main.ebf0c3b8.js",
     "static/js/787.b2f49d62.chunk.js": "/static/js/787.b2f49d62.chunk.js",
     "static/media/logocazasinfondo.png": "/static/media/logocazasinfondo.2abffa50e07dbd47c5e4.png",
     "index.html": "/index.html",
-    "main.ac062818.css.map": "/static/css/main.ac062818.css.map",
-    "main.5555091d.js.map": "/static/js/main.5555091d.js.map",
+    "main.1fe56a77.css.map": "/static/css/main.1fe56a77.css.map",
+    "main.ebf0c3b8.js.map": "/static/js/main.ebf0c3b8.js.map",
     "787.b2f49d62.chunk.js.map": "/static/js/787.b2f49d62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac062818.css",
-    "static/js/main.5555091d.js"
+    "static/css/main.1fe56a77.css",
+    "static/js/main.ebf0c3b8.js"
   ]
 }

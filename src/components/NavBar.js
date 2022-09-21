@@ -25,7 +25,7 @@ const NavBar = () => {
                     <ul><Link className="dropdown-item" to='/category/armas'> Armas</Link></ul>
                     <ul><Link className="dropdown-item" to='/nosotros'> Nosotros</Link></ul>
                     <ul><Link className="dropdown-item" to='/contacto'> Contacto</Link></ul>
-                    <ul><Link to='/carrito'> <CartWidget/> </Link> </ul>
+                    <ul><Link to='/cart'> <CartWidget/> </Link> </ul>
               </nav>
           <form className="d-flex">
         </form>
