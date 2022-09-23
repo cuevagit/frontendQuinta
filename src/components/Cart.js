@@ -1,5 +1,5 @@
 import { Button } from 'react-daisyui'
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import CartContext from './context/CartContext';
 import ProdsContext from './context/ProdsContext';
 import ItemCarrito from './ItemCarrito'
@@ -13,15 +13,23 @@ function Cart(){
     const {resetear} = useContext(ProdsContext)
     const {cantidadactual} = useContext(CartContext)
     const {cantidadFn} = useContext(CartContext)
+    const {cargar} = useContext(ProdsContext)
 
+
+    useEffect(() => {    
+      //Llamo a la función que carga los datos, definida en el contexto de Productos: ProdsContext
+     setTimeout(() => {
+      cargar();
+     }, 2000);
+       //eslint-disable-next-line react-hooks/exhaustive-deps
+   }, []);
 
     //Calculo el total gastado, más el total de la cantidad comprada, para mostrar en el 
     //Detalle del Carrito
     const totalfull = items.reduce((acumulador, items) => acumulador + Number(items.precio) * items.cantidad, 0)
-    //const cantcaprada = items.reduce((acumulador, items) => acumulador + items.cantidad, 0)
     cantidadFn(items, 0)
-
     //Doy la posibilidad de eliminar uno en particular, o todos, ejecutando las funciones correspondientes
+    
     return(
     <>
      <br></br>

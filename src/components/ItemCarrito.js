@@ -31,7 +31,7 @@ const ItemCarrito = ( {codigo, slug, marca, tipo, precio, estado, stock, cantida
           </Link>
           <br></br>
           <br></br>
-          <Button onClick={() => {stockf(prods, items, codigo); removeItem(codigo); }}>Eliminar</Button>   
+          <Button onClick={() => {  removeItem(codigo); stockf(prods, items, codigo); }}>Eliminar</Button>   
           
           <div></div>       
           <br></br>
