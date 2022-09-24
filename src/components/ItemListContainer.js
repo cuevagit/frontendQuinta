@@ -14,9 +14,7 @@ const ItemListContainer = () => {
 
 
   useEffect(() => {    
-    setTimeout(() => {
       cargar(categoryId);
-    }, 500);
     //Llamo a la función que carga los datos, definida en el contexto de Productos: ProdsContext
      //eslint-disable-next-line react-hooks/exhaustive-deps
  }, [categoryId]);

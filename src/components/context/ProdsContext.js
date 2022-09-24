@@ -12,16 +12,13 @@ const ProdsProvider = ({defaultValue=[], children}) => {
   //para tenerlos disponibles en otros componentes
     const [prods, setProds] = useState(defaultValue)
 
-  function cargar(categoryId) {
+  async function cargar(categoryId) {
         //Trayendo datos del Firebase
-        //categoryId = "armas"
           const db = getFirestore();
 
           if (categoryId === 'ofertas'){ 
-            //console.log("entró!!")
              const q = query(collection(db, 'productos'), where('oferta', "==", 'S'));
-             getDocs(q).then((snapshot) => {
-              /* if(snapshot.exists()){*/
+             await getDocs(q).then((snapshot) => {
              setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
           })     
             } else {
@@ -29,47 +26,16 @@ const ProdsProvider = ({defaultValue=[], children}) => {
           if (categoryId) { 
              const q = query(collection(db, 'productos'), where("categoria", "==", categoryId));
 
-            getDocs(q).then((snapshot) => {
-              /* if(snapshot.exists()){*/
-             setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+            await getDocs(q).then((snapshot) => {
+            setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
           })
           } else {
             const productos = collection(db, 'productos');
-            getDocs(productos).then((snapshot) => {
-              /* if(snapshot.exists()){*/
-             setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
-             })
+            await getDocs(productos).then((snapshot) => {
+            setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+            })
            }
           }
-          
-       //Trayendo datos del Json
-     /*   const getDatos = (datos, time) => {
-           //Trayendo del Json
-            return new Promise((resolve, reject) => {
-            setTimeout(() => {
-              if (datos) {
-                resolve(datos);
-              } else {
-                reject("Error");
-              }
-            }, time);
-            
-          }
-        )
-      };*/
-
- //   function cargar(productosJson) {
-
-           // console.log(snapshot.data())
-          
-
-    //Trayendo datos del Json  
-      /*  getDatos(productosJson , 2000)
-        .then((prods) => {
-          setProds(prods);
-        })
-        .catch((err) => console.log(err, ": no hay productos"));*/
-
     }
 
 
@@ -77,9 +43,6 @@ const ProdsProvider = ({defaultValue=[], children}) => {
     function stockf(prods, item, codigo){
 
       const db = getFirestore();
-
-             console.log("Esto es stockf")
-             console.log(prods)
 
        prods.find(p => p.codigo === codigo).stock = item.find(p => p.codigo === codigo).stock 
        prods.find(p => p.codigo === codigo).stock = prods.find(p => p.codigo === codigo).stock + item.find(p => p.codigo === codigo).cantidad
@@ -94,14 +57,7 @@ const ProdsProvider = ({defaultValue=[], children}) => {
     function resetear(items, prods){
       const db = getFirestore();
 
-       //setProds([])
-       console.log("Acaba de Restear: items y prods")
-       console.log(items)
-       console.log(prods)
        items.forEach( c => {
-        console.log("Esta es la cantidad")
-        console.log(c.cantidad)
-
         const datoItem = doc(db, "productos", (c.slug));
         getDoc(datoItem).then((snapshot) => {
           if(snapshot.exists()){
@@ -112,8 +68,6 @@ const ProdsProvider = ({defaultValue=[], children}) => {
             updateDoc(stockProd, {stock: prods.find(p => p.codigo === c.codigo).stock })
           }
        })
-
-
        })
        setProds(prods)
     }

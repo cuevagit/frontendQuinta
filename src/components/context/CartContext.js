@@ -12,7 +12,7 @@ const CartProvider = ({defaultValue=[], children}) => {
     const [items, setItems] = useState(defaultValue)
     const [cantidadactual, setCantidad] = useState(0)
 
-    const addItem = (item, quantity) => {  
+    const addItem = async (item, quantity) => {  
       //Si ya existe el producto en el carrito, le sumo la cantidad nueva comprada
       
       const db = getFirestore();
@@ -33,8 +33,7 @@ const CartProvider = ({defaultValue=[], children}) => {
         item.cantidad = quantity
         item.stock = item.stock - quantity
         const stockProd = doc(db, "productos", (item.slug))
-
-        updateDoc(stockProd, {stock: (items.find(p => p.codigo===(item.codigo))).stock })
+        await updateDoc(stockProd, {stock: (items.find(p => p.codigo===(item.codigo))).stock })
         setItems(items)
 
       } else {   //Si no existe, agrego un nuevo producto al carrito
@@ -42,7 +41,7 @@ const CartProvider = ({defaultValue=[], children}) => {
         item.stock = item.stock - quantity
         const db = getFirestore();
         const stockProd = doc(db, "productos", (item.slug))
-        updateDoc(stockProd, {stock: item.stock })
+        await updateDoc(stockProd, {stock: item.stock })
         setItems( prevState => prevState.concat(item) )
        }   
       
@@ -65,7 +64,6 @@ const CartProvider = ({defaultValue=[], children}) => {
       //Elimino un producto en particular del carrito
       function removeItem(id){
         setItems(items.filter(p => p.codigo!==id))
-        //setCantidad(cantidad - Number(items.filter(p => p.codigo!==id).cantidad))
       }
 
 
