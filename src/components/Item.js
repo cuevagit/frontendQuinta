@@ -7,7 +7,7 @@ const Item = ( {slug, marca, tipo, precio, estado, stock, img} ) => {
 //Card del Producto
     return (
    <>      
-        <div className="card w-96 bg-base-100 shadow-xl px-6 py-6"> 
+        <div className="card w-90 bg-base-100 shadow-xl px-6 py-6"> 
           <strong>{tipo}</strong>
           <img className= "imagen" src={img} alt="Imagen producto"/>
           <h6>Marca: {marca} </h6>
