@@ -5,11 +5,11 @@ import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Orden from './components/Orden';
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/context/CartContext';
-import { ProdsProvider } from './components/context/ProdsContext';
 
 
 function App(props) {
@@ -18,7 +18,6 @@ function App(props) {
   return (
     <>
     <BrowserRouter> 
-    <ProdsProvider>
       <CartProvider>
       <div className="App">
       <header className="App-header"> 
@@ -36,12 +35,12 @@ function App(props) {
          <Route exact path="/cart" element={<Cart/>}/>  
          <Route exact path="/item/:slug" element={<ItemDetailContainer/>}/>  
          <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>  
+         <Route exact path="/orden" element={<Orden/>}/>  
       </Routes>
       <br></br>
      </main>
     </div>
     </CartProvider>
-    </ProdsProvider>
 
     <footer className="App-footer">
        <h5>Cueva Martin © 2022 </h5>  

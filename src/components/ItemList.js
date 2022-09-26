@@ -9,7 +9,7 @@ const ItemList = ( {prods}) => {
  
         { prods.length ? (prods.map( p =>
           <Item key={p.codigo} codigo={p.codigo} slug={p.slug} marca={p.marca} 
-          tipo={p.tipo} precio={p.precio} estado={p.estado}  stock={p.stock} img={p.img}/>)) : 
+          tipo={p.tipo} precio={p.precio} estado={p.estado}  stock={p.stock} disponible={p.disponible} img={p.img}/>)) : 
           ( <Spinner/>)  
         }
       </div>

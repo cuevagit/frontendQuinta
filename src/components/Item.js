@@ -1,8 +1,8 @@
-//import {useState} from "react"
 import { Button } from 'react-daisyui'
 import { Link } from 'react-router-dom';
 
 const Item = ( {slug, marca, tipo, precio, estado, stock, img} ) => {
+
 
 //Card del Producto
     return (

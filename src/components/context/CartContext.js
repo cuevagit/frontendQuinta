@@ -1,6 +1,6 @@
 import { useState } from "react"
 import React from "react";
-import { doc, getDoc, getFirestore, updateDoc } from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const CartContext = React.createContext([])
 
@@ -14,7 +14,6 @@ const CartProvider = ({defaultValue=[], children}) => {
 
     const addItem = async (item, quantity) => {  
       //Si ya existe el producto en el carrito, le sumo la cantidad nueva comprada
-      
       const db = getFirestore();
       const datoItem = doc(db, "productos", (item.slug));
 
@@ -27,25 +26,14 @@ const CartProvider = ({defaultValue=[], children}) => {
 
 
       if(isInCart(item.codigo)){
-
         (items.find(p => p.codigo===(item.codigo))).cantidad = (items.find(p => p.codigo===(item.codigo))).cantidad + quantity;
-        (items.find(p => p.codigo===(item.codigo))).stock = (items.find(p => p.codigo===(item.codigo))).stock - quantity;
-        item.cantidad = quantity
-        item.stock = item.stock - quantity
-        const stockProd = doc(db, "productos", (item.slug))
-        await updateDoc(stockProd, {stock: (items.find(p => p.codigo===(item.codigo))).stock })
         setItems(items)
-
       } else {   //Si no existe, agrego un nuevo producto al carrito
-        item.cantidad = quantity
-        item.stock = item.stock - quantity
-        const db = getFirestore();
-        const stockProd = doc(db, "productos", (item.slug))
-        await updateDoc(stockProd, {stock: item.stock })
+        item.cantidad = quantity 
         setItems( prevState => prevState.concat(item) )
        }   
-      
     }
+  //  console.log(items)
 
     function sumar(cantidad, cantidadagregar){
       setCantidad(cantidad + cantidadagregar)

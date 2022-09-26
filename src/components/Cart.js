@@ -1,28 +1,17 @@
 import { Button } from 'react-daisyui'
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import CartContext from './context/CartContext';
-import ProdsContext from './context/ProdsContext';
-import ItemCarrito from './ItemCarrito'
+import ItemCarrito from './ItemCart'
 import { Link } from 'react-router-dom';
+import {RiDeleteBin6Line} from "react-icons/ri";
 
 function Cart(){
 
     const {clear} = useContext(CartContext)
     const {items} = useContext(CartContext)
-    const {prods} = useContext(ProdsContext)
-    const {resetear} = useContext(ProdsContext)
     const {cantidadactual} = useContext(CartContext)
     const {cantidadFn} = useContext(CartContext)
-    const {cargar} = useContext(ProdsContext)
 
-
-    useEffect(() => {    
-      //Llamo a la función que carga los datos, definida en el contexto de Productos: ProdsContext
-     setTimeout(() => {
-      cargar();
-     }, 2000);
-       //eslint-disable-next-line react-hooks/exhaustive-deps
-   }, []);
 
     //Calculo el total gastado, más el total de la cantidad comprada, para mostrar en el 
     //Detalle del Carrito
@@ -45,7 +34,8 @@ function Cart(){
      </div>
 
      <p> 
-        <Button onClick={() => {clear(); resetear(items, prods); }}>Eliminar Todos los Productos del Carrito  </Button>
+        <Button onClick={() => {clear()}}>  <RiDeleteBin6Line/></Button>
+        <Link to={'/orden/'}> <Button className="botoncompra">Realizar Compra  </Button> </Link>
      </p>
      </>
      ) : ("") 

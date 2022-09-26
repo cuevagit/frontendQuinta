@@ -222,3 +222,24 @@ a:hover, a:focus {
   position: absolute;
   opacity: 0.8
  }
+
+ .botoncompra{
+   position: absolute;
+   margin-left: 350px;
+   margin-top: 1px;
+ }
+
+ .orden{
+  height: 75vh;
+  width: max-content;
+  justify-content: left;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 30px;
+ }
+
+ .botonenviar{
+  position: absolute;
+  margin-left: 30px;
+  margin-top: -15px;
+}

@@ -1,7 +1,6 @@
 import '../App.css';
 import CartWidget from "./CartWidget"
 import logo from '../logocazasinfondo.png';
-//import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 

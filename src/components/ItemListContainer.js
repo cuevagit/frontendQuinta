@@ -1,16 +1,14 @@
-import { useEffect, useContext } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from './ItemList'
-//import productosJson from "../productos.json";
-import ProdsContext from './context/ProdsContext';
+import {collection, getDocs,  getFirestore, query, where} from "firebase/firestore";
 
 
 //Cargo datos desde el archivo Json y llamo al ItemList
 const ItemListContainer = () => {
 
   const { categoryId } = useParams()
-  const {prods} = useContext(ProdsContext)
-  const {cargar} = useContext(ProdsContext) 
+  const [prods, setProds] = useState([])
 
 
   useEffect(() => {    
@@ -18,6 +16,33 @@ const ItemListContainer = () => {
     //Llamo a la función que carga los datos, definida en el contexto de Productos: ProdsContext
      //eslint-disable-next-line react-hooks/exhaustive-deps
  }, [categoryId]);
+
+
+ async function cargar(categoryId) {
+  //Trayendo datos del Firebase
+    const db = getFirestore();
+
+    if (categoryId === 'ofertas'){ 
+       const q = query(collection(db, 'productos'), where('oferta', "==", 'S'));
+       await getDocs(q).then((snapshot) => {
+       setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+    })     
+      } else {
+
+    if (categoryId) { 
+       const q = query(collection(db, 'productos'), where("categoria", "==", categoryId));
+
+      await getDocs(q).then((snapshot) => {
+      setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+    })
+    } else {
+      const productos = collection(db, 'productos');
+      await getDocs(productos).then((snapshot) => {
+      setProds(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+      })
+     }
+    }
+}
 
  
 
