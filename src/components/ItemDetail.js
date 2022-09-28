@@ -40,9 +40,7 @@ let cantidad = 0;
     <div>
     </div>
         <div  className="card w-96 bg-base-100 shadow-xl px-6 py-6">
-
         { prods ? (
-
             <div key={prods.codigo} >
                 <br></br>
                 <img className= "imagen_detalle" src={'' + prods.img} alt="Imagen producto"/>

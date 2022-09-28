@@ -52,7 +52,6 @@ const ItemListContainer = () => {
         <br></br>   
         <div><strong>{categoryId ? ("Listado de " + categoryId) : ("Listado de productos")}</strong></div>
            <ItemList prods={prods}/>  
-    
           <br></br>  <br></br> 
         </div>
       </>

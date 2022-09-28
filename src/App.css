@@ -20,9 +20,9 @@
   display:flex;
  /* min-height: 5vh;*/
   height: 115px;
-   flex-direction: column;
+  flex-direction: column;
   align-items: center;
- justify-content: center;
+  justify-content: center;
   font-size: calc(10px + 1.5vmin);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -39,6 +39,16 @@
   justify-content: justify;
   font-size: calc(10px + 2vmin);
   color: rgb(10, 10, 10);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-main2 {
+  background-color: hwb(120 54% 43% / 0.952);
+  display:flex;
+  align-items: justify;
+  justify-content: justify;
+  font-size: calc(10px + 2vmin);
+  color: rgb(9, 12, 10);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -75,10 +85,10 @@
   height: 125px;
   width: 125px;
   /*margin: 20px 5px;*/
-  display:contents;
+  display: contents;
   justify-content: left;
   align-items: flex;
-  flex-direction:justify;
+  flex-direction: justify;
   border-top: 30px;
   border-spacing: 50px;
   background-color: #8a909c;
@@ -100,7 +110,6 @@
   height: max-content;
   width: max-content;
   margin-top: 5px;
-  /*flex-direction: column;*/
 }
 
 .card{
@@ -243,3 +252,17 @@ a:hover, a:focus {
   margin-left: 30px;
   margin-top: -15px;
 }
+
+.toggle{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0.5px;
+  padding-bottom: 1px;
+ /* -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;*/
+  margin-top: -30px;
+  margin-left: 1290px;
+  position: absolute;
+  opacity: 0.8
+ }
