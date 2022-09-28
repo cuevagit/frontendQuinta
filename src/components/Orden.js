@@ -54,16 +54,15 @@ function Orden(){
 
      if(items.length > 0){
      const orderCollection = collection(db, 'ordenes')
-     addDoc(orderCollection, order).then(({ codigo }) => console.log(codigo));
-
-     clear();
-
+     addDoc(orderCollection, order).then(({ id }) => 
      Swal.fire(
       '¡Felicitaciones!',
       'La compra se realizó con éxito, su número de comprobante es: ' + nrocomprobante,
-      'info'
+      'success'
+     )  , 
+     clear()
     );
-
+     
      }
 
     }
