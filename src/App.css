@@ -48,7 +48,7 @@
   align-items: justify;
   justify-content: justify;
   font-size: calc(10px + 2vmin);
-  color: rgb(9, 12, 10);
+  color: rgb(19, 2, 51);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -261,7 +261,7 @@ a:hover, a:focus {
  /* -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;*/
-  margin-top: -30px;
+  margin-top: -100px;
   margin-left: 1290px;
   position: absolute;
   opacity: 0.8
