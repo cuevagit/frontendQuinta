@@ -1,6 +1,6 @@
-# Armería "La Liebre"
+# Getting Started with Create React App
 
-Proyecto creado con ReactJS, utilizando como Base de Datos FireBase.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

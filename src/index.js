@@ -10,12 +10,12 @@ import reportWebVitals from './reportWebVitals';
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDo9GYD-jHwv3lnSIwx9J6SdLOByuCcbI4",
-  authDomain: "react-project-faa6e.firebaseapp.com",
-  projectId: "react-project-faa6e",
-  storageBucket: "react-project-faa6e.appspot.com",
-  messagingSenderId: "587094204213",
-  appId: "1:587094204213:web:48fa6548e3aa3c78a9b67c"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 
