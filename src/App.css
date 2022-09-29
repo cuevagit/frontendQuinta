@@ -154,7 +154,7 @@ a:hover, a:focus {
 }
 
 .nosotros{
-  height: 363px;
+  height: 77vh;
   width: max-content;
   justify-content: center;
   display: flex;
@@ -167,7 +167,7 @@ a:hover, a:focus {
 }
 
 .contacto{
-  height: 363px;
+  height: 77vh;
   width: max-content;
   justify-content: center;
   display: flex;
