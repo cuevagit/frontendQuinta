@@ -266,3 +266,10 @@ a:hover, a:focus {
   position: absolute;
   opacity: 0.8
  }
+
+ .cuadro{
+   position: absolute;
+   margin-left: 800px;
+ }
+
+

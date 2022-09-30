@@ -14,19 +14,29 @@ function Orden(){
 
    const db = getFirestore();
 
+   const totalprecio = items.reduce((acumulador, items) => acumulador + Number(items.precio) * items.cantidad, 0)
+   var f = new Date();
+   const fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+
+   const totalcantidad = items.reduce((acumulador, items) => acumulador + Number(items.cantidad), 0)
+
      function onSubmit(ev){
         ev.preventDefault()
+
+        if(ev.target.apynom.value === ""  || ev.target.telefono.value === "" || ev.target.email.value === ""){    
+        Swal.fire(
+          'Debe ingresar todos los datos',
+          '',
+          'error'
+         )  
+         return
+        }
+
         const nombre = ev.target.apynom.value
         const telefono = ev.target.telefono.value
         const email = ev.target.email.value
 
         let  arr, carrito;   
-
-        const totalprecio = items.reduce((acumulador, items) => acumulador + Number(items.precio) * items.cantidad, 0)
-        var f = new Date();
-        const fecha = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
-
-        const totalcantidad = items.reduce((acumulador, items) => acumulador + Number(items.cantidad), 0)
 
 
         items.forEach( c => {
@@ -60,7 +70,10 @@ function Orden(){
       'La compra se realizó con éxito, su número de comprobante es: ' + nrocomprobante,
       'success'
      )  , 
-     clear()
+     clear(),
+     ev.target.apynom.value = "",
+     ev.target.telefono.value = "",
+     ev.target.email.value = ""
     );
      
      }
@@ -68,6 +81,7 @@ function Orden(){
     }
  
     return (
+    <div className="flex flex-center">
     <div className="orden">
     <form onSubmit={onSubmit}>    
     <h1><strong>Formulario datos del Comprador: </strong> </h1>
@@ -92,7 +106,39 @@ function Orden(){
 
     </div>
 
+    <div className="cuadro mt-4 mb-3 ml-60 border-1 drop-shadow-xl">
     
+    <p className = "bg-green-200 text-green-700 mb-4 text-lg">Productos Seleccionados</p>
+
+    <div className="mt-2 mb-1">
+       
+        <table className="table-auto">
+        <thead>
+          <tr>
+            <th className="pr-4 pl-4">Producto</th>
+            <th className="pr-4">Cantidad</th>
+            <th className="pr-4">Importe</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map(p=>
+          <tr key={p.codigo} className="divide-y divide-solid ">
+            <td className="pl-2 pr-4">{p.tipo}</td>
+            <td className="pl-2 pr-4">{p.cantidad}</td>
+            <td className="pl-2 pr-4">$ {p.precio * p.cantidad}</td>
+          </tr>
+         )}
+        <div className="flex ml-3 mt-2 drop-shadow-xl bg-gray-100">
+         <h1 className="pr-20"> Costo Total:</h1> 
+         <p className="ml-20"> $ {totalprecio}</p>
+      </div>
+        </tbody>
+      </table>
+
+    </div>
+</div>
+
+    </div>
 
     )
 }

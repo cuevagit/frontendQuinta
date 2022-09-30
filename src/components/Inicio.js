@@ -1,3 +1,4 @@
+
 const Inicio = ( ) => {
 
   //Mensaje de Bienvenida
@@ -11,3 +12,5 @@ const Inicio = ( ) => {
     }
   
     export default Inicio
+
+    
