@@ -19,7 +19,7 @@ También se permite eliminar todos los productos o algún producto en particular.
 
 ### `Orden de Compra`
 
-Luego Al finalizar la compra se le pide mendiante un formulario los datos del comrpador, para luego grabar esos datos, 
+Luego Al finalizar la compra se le pide mendiante un formulario los datos del comrpador, para luego grabar esos datos, en este mismo lugar se muestra una tabla con el resumen de la compre (producto, precio, cantidades, totales)
 mas los datos de la/s compra/s realizada/s, más la fecha que se realizó la transacción, y demás datos importantes de la compra en la Base de Datos. 
 Luego se le muestra al usuario el comprobante de compra con un  número de comprobante.  
 Recién en esta instancia se actualiza el stock de el/los producto/s comprados en la BD. Y se vacia el carrito.
