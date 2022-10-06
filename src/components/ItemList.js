@@ -1,7 +1,7 @@
 import Item from './Item'
 import Spinner from './Spinner'
 
-//Recorro los productos y llamo al item
+//Recorro los productos y llamo al componente Item
 const ItemList = ( {prods}) => {
     return ( 
       <div className="producto">
